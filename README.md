@@ -22,4 +22,5 @@ The agent operates in a 2D grid with:
 ##  Tech Stack
 - Python 3
 - NumPy
+- Dataclasses & Typing
 - Matplotlib (for visualization)

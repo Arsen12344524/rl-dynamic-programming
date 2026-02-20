@@ -1,26 +1,31 @@
-# Reinforcement Learning: Dynamic Programming in GridWorld
+# GridWorld: DP-based Reinforcement Learning
 
-This project implements fundamental Dynamic Programming (DP) algorithms to solve Markov Decision Processes (MDP). The goal is to find the optimal policy for an agent in a custom GridWorld environment.
+This repository contains my implementation of fundamental Dynamic Programming (DP) algorithms for solving Markov Decision Processes (MDP). The project demonstrates how an agent learns to navigate a grid, avoid traps, and reach a target using Bellman equations.
 
-##  Implemented Algorithms
-- **Policy Evaluation**: Iterative calculation of the state-value function $V^\pi$.
-- **Policy Iteration**: Finding the optimal policy by alternating between evaluation and improvement.
-- **Value Iteration**: Directly computing the optimal value function to derive the policy.
-- **Modified Policy Iteration (MPI)**: A more efficient hybrid approach.
 
-##  Environment: GridWorld
-The agent operates in a 2D grid with:
-- **Obstacles (Walls)**: Non-passable cells.
-- **Pitfalls**: Negative rewards (traps).
-- **Goal**: The target state with a high positive reward.
 
-##  Key Insights
-- Analyzed the impact of the discount factor ($\gamma$) on agent behavior.
-- Compared convergence speeds (number of iterations/sweeps) between Policy and Value Iteration.
-- Visualized the results using Value Heatmaps and Policy Arrows.
+###  Algorithms Implemented
+I’ve implemented and compared several core Reinforcement Learning approaches:
+* **Policy Iteration**: A complete cycle of iterative policy evaluation and improvement
+* **Value Iteration**: A direct method focusing on finding the optimal value function
+* **Modified Policy Iteration (MPI)**: An efficient hybrid that balances computation time and convergence speed
 
-##  Tech Stack
-- Python 3
-- NumPy
-- Dataclasses & Typing
-- Matplotlib (for visualization)
+###  The Environment
+The **GridWorld** setup is fully customizable, allowing the definition of:
+* **Walls**: Obstacles that the agent cannot pass through
+* **Pitfalls**: Dangerous cells with negative rewards
+* **Goal**: A terminal state with a high reward
+
+###  Key Insights & Results
+Through various experiments in the Jupyter Notebook, I analyzed:
+* **Gamma ($\gamma$) Impact**: How the discount factor changes agent behavior — from "short-sighted" immediate gains to long-term strategic planning
+* **Convergence Speed**: A comparison of the number of iterations (sweeps) required for each algorithm to converge under different thresholds ($\theta$)
+* **Visualization**: State-value functions are visualized via heatmaps, and optimal strategies are displayed using direction arrows (Policy Maps)
+
+
+
+###  Tech Stack
+* **Python 3.10+**
+* **NumPy**
+* **Matplotlib**
+* **Dataclasses & Typing**
